@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rexii - Hindi AI Audio Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="main.ts" type="module" defer></script>
+</head>
+<body class="bg-gray-900 text-white font-sans flex items-center justify-center min-h-screen p-4">
+
+    <main class="w-full max-w-2xl mx-auto space-y-8">
+        <header class="text-center">
+            <h1 class="text-4xl sm:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-600">
+                🇮🇳 Rexii - Audio Generator
+            </h1>
+            <p class="text-gray-400 mt-2">हिंदी टेक्स्ट को AI आवाज़ में बदलें</p>
+        </header>
+
+        <div class="bg-gray-800 p-6 rounded-xl shadow-2xl space-y-6">
+            <textarea 
+                id="text-input" 
+                rows="6" 
+                class="w-full p-4 bg-gray-900 border-2 border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors placeholder-gray-500 resize-none"
+                placeholder="हिंदी में टेक्स्ट लिखें..."
+            ></textarea>
+
+            <button 
+                id="generate-btn"
+                class="w-full flex items-center justify-center gap-2 bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-500 transition-all duration-300 disabled:bg-gray-600 disabled:cursor-not-allowed"
+                disabled>
+                <!-- Spinner icon (hidden by default) -->
+                <svg id="spinner" class="animate-spin -ml-1 mr-3 h-5 w-5 text-white hidden" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                <span id="button-text">आवाज़ बनाएं</span>
+            </button>
+
+            <div id="audio-container" class="mt-4">
+                <audio id="audio-player" controls class="w-full"></audio>
+            </div>
+            
+            <div id="error-message" class="hidden p-3 bg-red-900/50 text-red-300 border border-red-700 rounded-lg text-center">
+                <!-- Error messages will be inserted here -->
+            </div>
+        </div>
+
+        <footer class="text-center text-gray-500 text-sm">
+            <p>&copy; 2024 Rexii. Powered by Hugging Face & Node.js</p>
+        </footer>
+    </main>
+
+</body>
+</html>
