@@ -39,3 +39,11 @@ Follow these instructions to set up, run, and deploy the project.
 ```bash
 git clone <your-repo-url>
 cd hindi-tts-ai
+
+### 3. Get Hugging Face API Key
+Go to your Hugging Face account settings: huggingface.co/settings/tokens.
+Click "New token", give it a name (e.g., hindi-tts-app), and choose the read role.
+Click "Generate a token" and copy the key.
+
+
+
