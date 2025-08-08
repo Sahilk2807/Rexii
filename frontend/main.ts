@@ -1,7 +1,7 @@
 // --- CONFIGURATION ---
 // On local, this will be http://localhost:3000/tts
 // After deployment, change this to your Railway backend URL
-const BACKEND_URL = 'http://localhost:3000/tts'; // IMPORTANT: Change for deployment!
+const BACKEND_URL = 'https://rexii.onrender.com/tts'; // IMPORTANT: Change for deployment!
 
 // --- ELEMENT SELECTORS ---
 const textInput = document.getElementById('text-input') as HTMLTextAreaElement;
